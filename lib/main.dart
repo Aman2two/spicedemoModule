@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
-import '../utils/widget_util.dart';
+import 'utils/widget_util.dart';
 
 void main() {
   runApp(MyApp());
