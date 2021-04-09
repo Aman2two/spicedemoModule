@@ -8,15 +8,15 @@ import 'package:dio/dio.dart';
 class ApiCall {
   // Get data from server and
   Future<List<ItemModel>> getDataFromServer(ItemController controller) async {
-    try {
+    // try {
       var dio = Dio();
       Response data = await dio.get(apiUrl);
       List<dynamic> list = jsonDecode(data.toString())[dataObject];
       List<ItemModel> items = list.map((e) => ItemModel.fromJson(e)).toList();
       controller.updateList(items);
       return items;
-    } catch (e) {
-      print(e);
-    }
+    // } catch (e) {
+    //   print(e);
+    // }
   }
 }
