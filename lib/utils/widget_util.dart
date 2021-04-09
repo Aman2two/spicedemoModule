@@ -70,7 +70,7 @@ Widget imageWidget(ItemModel itemModel) => Image.network(
             child: Icon(
           Icons.image_outlined,
           size: 100.0,
-          color: Colors.grey,
+          color: Colors.pink[600],
         ));
       },
       fit: BoxFit.cover,
