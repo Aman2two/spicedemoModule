@@ -185,6 +185,7 @@ class SingleItem extends StatelessWidget {
                         Text(
                           data.shortDesc,
                           style: TextStyle(fontSize: 11, color: Colors.grey),
+                          maxLines: 1,
                         ),
                         SizedBox(
                           width: 2,

@@ -186,7 +186,8 @@ class DetailScreen extends StatelessWidget {
                         EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
                     child: Row(
                       children: [
-                        Icon(Icons.favorite_border),
+                        Icon(Icons.favorite_border, size: 22.0),
+                        SizedBox(width: 2.0),
                         Text(
                           wishListText,
                           style:
@@ -207,7 +208,9 @@ class DetailScreen extends StatelessWidget {
                         Icon(
                           Icons.shopping_bag,
                           color: Colors.white,
+                          size: 22.0,
                         ),
+                        SizedBox(width: 2.0),
                         Text(
                           addToBag,
                           style: TextStyle(fontSize: 19.0, color: Colors.white),

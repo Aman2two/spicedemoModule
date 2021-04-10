@@ -4,8 +4,6 @@ import 'package:flutter/services.dart';
 
 import 'constants.dart';
 
-
-
 // UI of App bar used in both screen
 Widget customAppBar(String text, bool showSubHeading, BuildContext context) =>
     AppBar(
@@ -66,12 +64,14 @@ Widget customAppBar(String text, bool showSubHeading, BuildContext context) =>
 Widget imageWidget(ItemModel itemModel) => Image.network(
       itemModel.imageURL,
       errorBuilder: (context, object, sta) {
-        return Center(
-            child: Icon(
+        return Container(
+          color: Colors.grey[300],
+            child: Center(
+                child: Icon(
           Icons.image_outlined,
           size: 100.0,
           color: Colors.pink[600],
-        ));
+        )));
       },
       fit: BoxFit.cover,
     );
