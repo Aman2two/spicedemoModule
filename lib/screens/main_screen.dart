@@ -164,7 +164,7 @@ class SingleItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(child: Container(child: imageWidget(data))),
+            Expanded(child: Container(child: smallImageWidget(data))),
             Padding(
               padding: EdgeInsets.all(5.0),
               child: Row(

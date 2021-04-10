@@ -65,13 +65,32 @@ Widget imageWidget(ItemModel itemModel) => Image.network(
       itemModel.imageURL,
       errorBuilder: (context, object, sta) {
         return Container(
-          color: Colors.grey[300],
+            color: Colors.grey[300],
             child: Center(
                 child: Icon(
-          Icons.image_outlined,
-          size: 100.0,
-          color: Colors.pink[600],
-        )));
+              Icons.image_outlined,
+              size: 100.0,
+              color: Colors.pink[600],
+            )));
       },
       fit: BoxFit.cover,
     );
+
+Widget smallImageWidget(ItemModel itemModel) {
+  return itemModel.imageURL.startsWith("http")
+      ? Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: NetworkImage(itemModel.imageURL), fit: BoxFit.cover),
+          ),
+        )
+      : Container(
+          color: Colors.grey[300],
+          child: Center(
+              child: Icon(
+            Icons.image_outlined,
+            size: 100.0,
+            color: Colors.pink[600],
+          )));
+  ;
+}
