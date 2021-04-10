@@ -62,7 +62,7 @@ class DetailScreen extends StatelessWidget {
             ),
             Text(
               data.shortDesc,
-              style: TextStyle(fontSize: 15, color: Colors.black45),
+              style: TextStyle(fontSize: 15, color: Colors.grey[700]),
             ),
             SizedBox(
               height: 30.0,
@@ -82,7 +82,7 @@ class DetailScreen extends StatelessWidget {
                       Text("₹${data.DiscountPrice}",
                           style: TextStyle(
                               fontSize: 16,
-                              color: Colors.grey,
+                              color: Colors.grey[700],
                               decoration: TextDecoration.lineThrough),
                           textAlign: TextAlign.center),
                       SizedBox(
@@ -116,7 +116,7 @@ class DetailScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
           child: Text(
             data.longDesc.discountDetails,
-            style: TextStyle(color: Colors.black54, fontSize: 16.0),
+            style: TextStyle(color: Colors.grey[700], fontSize: 16.0),
           ),
         ),
       );
@@ -264,7 +264,7 @@ class DetailScreen extends StatelessWidget {
             height: 2.0,
           ),
           Text(data.values.first.toString(),
-              style: TextStyle(color: Colors.grey)),
+              style: TextStyle(color: Colors.grey[700])),
           SizedBox(
             height: 7.0,
           ),
