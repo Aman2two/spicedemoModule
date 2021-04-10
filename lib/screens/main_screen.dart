@@ -184,7 +184,7 @@ class SingleItem extends StatelessWidget {
                         ),
                         Text(
                           data.shortDesc,
-                          style: TextStyle(fontSize: 11, color: Colors.grey),
+                          style: TextStyle(fontSize: 13, color: Colors.grey[700]),
                           maxLines: 1,
                         ),
                         SizedBox(
@@ -196,7 +196,7 @@ class SingleItem extends StatelessWidget {
                             : Wrap(
                                 crossAxisAlignment: WrapCrossAlignment.end,
                                 children: [
-                                  Text("₹${data.OrigPrice}",
+                                  Text("₹ ${data.OrigPrice}",
                                       style: TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.bold),
@@ -204,10 +204,10 @@ class SingleItem extends StatelessWidget {
                                   SizedBox(
                                     width: 3,
                                   ),
-                                  Text("₹${data.DiscountPrice}",
+                                  Text("₹ ${data.DiscountPrice}",
                                       style: TextStyle(
-                                          fontSize: 12,
-                                          color: Colors.grey,
+                                          fontSize: 13,
+                                          color: Colors.grey[700],
                                           decoration:
                                               TextDecoration.lineThrough),
                                       textAlign: TextAlign.center),
@@ -217,7 +217,7 @@ class SingleItem extends StatelessWidget {
                                   Text(
                                     "${data.discountPercentage} $textOff",
                                     style: TextStyle(
-                                        fontSize: 13, color: Colors.orange),
+                                        fontSize: 13, color: Colors.orange[700]),
                                     textAlign: TextAlign.center,
                                   ),
                                 ],
