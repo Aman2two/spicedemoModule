@@ -2,6 +2,7 @@ import 'package:demo_spice/Models/model.dart';
 import 'package:demo_spice/utils/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 import '../utils/widget_util.dart';
 
@@ -58,11 +59,11 @@ class DetailScreen extends StatelessWidget {
             ),
             Text(
               data.name,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 17.0.sp, fontWeight: FontWeight.bold),
             ),
             Text(
               data.shortDesc,
-              style: TextStyle(fontSize: 15, color: Colors.grey[700]),
+              style: TextStyle(fontSize: 13.0.sp, color: Colors.grey[700]),
             ),
             SizedBox(
               height: 30.0,
@@ -74,14 +75,14 @@ class DetailScreen extends StatelessWidget {
                     children: [
                       Text("₹${data.OrigPrice}",
                           style: TextStyle(
-                              fontSize: 19, fontWeight: FontWeight.bold),
+                              fontSize: 17.0.sp, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.center),
                       SizedBox(
                         width: 3,
                       ),
                       Text("₹${data.DiscountPrice}",
                           style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 13.0.sp,
                               color: Colors.grey[700],
                               decoration: TextDecoration.lineThrough),
                           textAlign: TextAlign.center),
@@ -90,7 +91,7 @@ class DetailScreen extends StatelessWidget {
                       ),
                       Text(
                         "(${data.discountPercentage} $textOff)",
-                        style: TextStyle(fontSize: 16, color: Colors.orange),
+                        style: TextStyle(fontSize: 13.0.sp, color: Colors.orange),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -116,7 +117,7 @@ class DetailScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
           child: Text(
             data.longDesc.discountDetails,
-            style: TextStyle(color: Colors.grey[700], fontSize: 16.0),
+            style: TextStyle(color: Colors.grey[700], fontSize: 12.0.sp),
           ),
         ),
       );
@@ -135,7 +136,7 @@ class DetailScreen extends StatelessWidget {
                   data.longDesc.exchangeDtls,
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 16.0,
+                      fontSize: 12.0.sp,
                       fontWeight: FontWeight.w500),
                 ),
               ],
@@ -153,14 +154,14 @@ class DetailScreen extends StatelessWidget {
                 Text(
                   selectSize,
                   style: TextStyle(
-                      fontSize: 15.0,
+                      fontSize: 11.0.sp,
                       color: Colors.grey,
                       fontWeight: FontWeight.w700),
                 ),
                 Text(
                   selectChart,
                   style: TextStyle(
-                      fontSize: 15.0,
+                      fontSize: 11.0.sp,
                       color: Colors.pink[600],
                       fontWeight: FontWeight.w700),
                 ),
@@ -186,12 +187,12 @@ class DetailScreen extends StatelessWidget {
                         EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
                     child: Row(
                       children: [
-                        Icon(Icons.favorite_border, size: 22.0),
+                        Icon(Icons.favorite_border, size: 18.0.sp),
                         SizedBox(width: 2.0),
                         Text(
                           wishListText,
                           style:
-                              TextStyle(fontSize: 19.0, color: Colors.black87),
+                              TextStyle(fontSize: 14.0.sp, color: Colors.black87),
                         ),
                       ],
                     ),
@@ -208,12 +209,12 @@ class DetailScreen extends StatelessWidget {
                         Icon(
                           Icons.shopping_bag,
                           color: Colors.white,
-                          size: 22.0,
+                          size: 18.0.sp,
                         ),
                         SizedBox(width: 2.0),
                         Text(
                           addToBag,
-                          style: TextStyle(fontSize: 19.0, color: Colors.white),
+                          style: TextStyle(fontSize: 14.0.sp, color: Colors.white),
                         ),
                       ],
                     ),
@@ -230,13 +231,13 @@ class DetailScreen extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             border: Border.all(width: 1.2),
-            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+            borderRadius: BorderRadius.all(Radius.circular(20.0.sp)),
           ),
           child: Padding(
               padding: EdgeInsets.all(7.0),
               child: Text(text,
                   style:
-                      TextStyle(fontWeight: FontWeight.w500, fontSize: 21.0))),
+                      TextStyle(fontWeight: FontWeight.w500, fontSize: 17.0.sp))),
         ),
       );
 
@@ -258,13 +259,13 @@ class DetailScreen extends StatelessWidget {
         children: [
           Text(
             data.keys.first.toString(),
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87,fontSize: 12.0.sp,fontWeight: FontWeight.bold),
           ),
           SizedBox(
             height: 2.0,
           ),
           Text(data.values.first.toString(),
-              style: TextStyle(color: Colors.grey[700])),
+              style: TextStyle(color: Colors.grey[700],fontSize: 12.0.sp)),
           SizedBox(
             height: 7.0,
           ),

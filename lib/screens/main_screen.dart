@@ -5,8 +5,8 @@ import 'package:demo_spice/network/api_call.dart';
 import 'package:demo_spice/utils/constants.dart';
 import 'package:demo_spice/utils/widget_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 import 'detail_screen.dart';
 
@@ -52,7 +52,7 @@ class _ItemsPageState extends State<ItemsPage> {
                             ? Text(
                                 mainPageSubHeading,
                                 style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 14.0.sp,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.grey[600]),
                               )
@@ -61,7 +61,7 @@ class _ItemsPageState extends State<ItemsPage> {
                             ? Text(
                                 "+${controller.dataList.length - 4} items",
                                 style: TextStyle(
-                                    fontSize: 16,
+                                    fontSize: 13.0.sp,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.pink[600]),
                               )
@@ -92,7 +92,7 @@ class _ItemsPageState extends State<ItemsPage> {
         bottomNavigationBar: controller.dataList.length > 0
             ? BottomAppBar(
                 child: Container(
-                height: 60,
+                height: 60.0,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -103,7 +103,7 @@ class _ItemsPageState extends State<ItemsPage> {
                           width: 24,
                           color: Colors.grey[700],
                         ),
-                        Text(textSort,style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.w600),),
+                        Text(textSort,style: TextStyle(fontSize: 12.0.sp,fontWeight: FontWeight.w400),),
                       ],
                     ),
                     Row(
@@ -112,7 +112,7 @@ class _ItemsPageState extends State<ItemsPage> {
                           Icons.filter_alt,
                           color: Colors.grey[600],
                         ),
-                        Text(textFilter,style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.w600)),
+                        Text(textFilter,style: TextStyle(fontSize: 12.0.sp,fontWeight: FontWeight.w400)),
                       ],
                     )
                   ],
@@ -177,14 +177,14 @@ class SingleItem extends StatelessWidget {
                         Text(
                           data.name,
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
+                              fontSize: 12.0.sp, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
                           height: 2,
                         ),
                         Text(
                           data.shortDesc,
-                          style: TextStyle(fontSize: 13, color: Colors.grey[700]),
+                          style: TextStyle(fontSize: 10.0.sp, color: Colors.grey[700]),
                           maxLines: 1,
                         ),
                         SizedBox(
@@ -198,7 +198,7 @@ class SingleItem extends StatelessWidget {
                                 children: [
                                   Text("₹ ${data.OrigPrice}",
                                       style: TextStyle(
-                                          fontSize: 14,
+                                          fontSize: 10.0.sp,
                                           fontWeight: FontWeight.bold),
                                       textAlign: TextAlign.center),
                                   SizedBox(
@@ -206,7 +206,7 @@ class SingleItem extends StatelessWidget {
                                   ),
                                   Text("₹ ${data.DiscountPrice}",
                                       style: TextStyle(
-                                          fontSize: 13,
+                                          fontSize: 9.0.sp,
                                           color: Colors.grey[700],
                                           decoration:
                                               TextDecoration.lineThrough),
@@ -217,7 +217,7 @@ class SingleItem extends StatelessWidget {
                                   Text(
                                     "${data.discountPercentage} $textOff",
                                     style: TextStyle(
-                                        fontSize: 13, color: Colors.orange[700]),
+                                        fontSize: 9.0.sp, color: Colors.orange[700]),
                                     textAlign: TextAlign.center,
                                   ),
                                 ],

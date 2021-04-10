@@ -1,6 +1,7 @@
 import 'package:demo_spice/Models/model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:sizer/sizer.dart';
 
 import 'constants.dart';
 
@@ -14,13 +15,13 @@ Widget customAppBar(String text, bool showSubHeading, BuildContext context) =>
         children: [
           Text(
             text,
-            style: TextStyle(fontSize: 16),
+            style: TextStyle(fontSize: 13.0.sp),
           ),
           showSubHeading
               ? Text(
                   appBarSubHead,
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 11.0.sp,
                     color: Colors.grey,
                   ),
                 )
@@ -41,19 +42,19 @@ Widget customAppBar(String text, bool showSubHeading, BuildContext context) =>
         Icon(
           Icons.search,
           color: Colors.grey[700],
-          size: 30.0,
+          size: 20.0.sp,
         ),
         SizedBox(width: 10),
         Icon(
           Icons.favorite_border,
           color: Colors.grey[700],
-          size: 30.0,
+          size:  20.0.sp,
         ),
         SizedBox(width: 10),
         Icon(
           Icons.shopping_bag_outlined,
           color: Colors.grey[700],
-          size: 30.0,
+          size:  20.0.sp,
         ),
         SizedBox(width: 10),
       ],
@@ -81,7 +82,7 @@ Widget smallImageWidget(ItemModel itemModel) {
       ? Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage(itemModel.imageURL), fit: BoxFit.cover),
+                image: NetworkImage(itemModel.imageURL), fit: BoxFit.fill),
           ),
         )
       : Container(
@@ -90,7 +91,7 @@ Widget smallImageWidget(ItemModel itemModel) {
               child: Icon(
             Icons.image_outlined,
             size: 100.0,
-            color: Colors.pink[600],
+            color: Colors.white,
           )));
   ;
 }
